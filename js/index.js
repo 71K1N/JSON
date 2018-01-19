@@ -18,7 +18,8 @@ $(document).ready(function () {
                     data: {'login':dados},
                     success: function( data )
                     {
-                        alert( data );
+                        $("#resultado").show();
+                        $("#mensagem").html(data);
                     }
                 });
 
