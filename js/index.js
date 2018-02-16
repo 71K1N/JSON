@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+    //envia dados apos validar formulario
     $("#enviar").click(function () {
         $("#formulario").validate({
             submitHandler:function (form) {
