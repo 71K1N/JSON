@@ -32,3 +32,21 @@ $(document).ready(function () {
 
 
 })
+
+/**
+*  Form to json
+*
+*Transforma um formulario em json
+*
+*/
+function formToJson(form, opcao) {
+    var form = $("#" + form).serializeArray();
+    var json = '[{';
+    var callback=' "opcao":"'+opcao+'"';
+    $.each(form, function(index, value) {
+        json += '"' + value.name + '":"' + value.value + '",';
+    });
+   json += callback+'}]';
+    json = JSON.parse(json);
+    return json;
+}
